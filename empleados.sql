@@ -21,10 +21,9 @@ where coddep in ('E11', 'E21', 'D11', 'D21');
 #que entraron en la compañía después del 1 de Enero de 1997. También se quiere la información correspondiente a su código de trabajo*/
 
 use empleados_bbdd;
-select nombre, apellido, codtra, salario, feching
+select nombre, apellido, codtra, salario, salario/14 as salarioMensual, feching
 from templa
-where salario > 2500 AND feching > '1997-01-01';
-
+where salario/14 > 2500 AND feching > '1997-01-01';
 
 
 /*4.Nombre, salario, fecha de ingreso, código de departamento de los empleados que trabajan en los 
